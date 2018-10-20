@@ -9,4 +9,15 @@
     <PackageReference Include="HtmlAgilityPack" Version="1.8.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="Pages\About.cshtml" />
+    <Content Remove="Pages\Contact.cshtml" />
+    <Content Remove="Pages\Error.cshtml" />
+    <Content Remove="Pages\Privacy.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\Contact.cshtml.cs" />
+    <Compile Remove="Pages\Error.cshtml.cs" />
+    <Compile Remove="Pages\Privacy.cshtml.cs" />
+  </ItemGroup>
 </Project>
