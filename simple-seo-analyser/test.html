@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
 <meta name="viewport" content="width=device-width" />
 <title>Setting Up Vscode for Single-file C++ Builds | Bruceoutdoors Blog of Blots</title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -37,40 +38,42 @@
 			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }</style>
 	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJyFUu1OwzAMfCGyMA2G+IF4liQ1NKvdRLGz0rfHXaGIDYU/ke9y56/ETtmENAqMYqmajPU9jmynHBIZpogwX6FdYL6zf9u4eg4lZolJ0VtCTFNL36czFOOr9wjqlhlhk8cxYO2UVsJ2jvuoCXhHcbyVnNiK3g8+fWxBqy7GYXGBZBcGc0EteQF0Ap3JieUKtWyu02aNd+VrgRteTdGOSS5DbUErW0gFlKfsZFEQdNEBAqmsZaN8/HYtYa8DN8usrXqfCzAbPSlWMtJroX/ao6WVdZmXN/vF3FjXjDZXb6VUnI3uJpLDn1/wSi/7x8Nh//x0vH84fQLRvwB9?cssminify=yes' type='text/css' media='all' />
 <style id='wpcom-admin-bar-inline-css' type='text/css'>
 
-			.admin-bar {
-				position: inherit !important;
-				top: auto !important;
-			}
-			.admin-bar .goog-te-banner-frame {
-				top: 32px !important
-			}
-			@media screen and (max-width: 782px) {
-				.admin-bar .goog-te-banner-frame {
-					top: 46px !important;
-				}
-			}
-			@media screen and (max-width: 480px) {
-				.admin-bar .goog-te-banner-frame {
-					position: absolute;
-				}
-			}
-		
+    .admin-bar {
+        position: inherit !important;
+        top: auto !important;
+    }
+
+        .admin-bar .goog-te-banner-frame {
+            top: 32px !important
+        }
+
+    @media screen and (max-width: 782px) {
+        .admin-bar .goog-te-banner-frame {
+            top: 46px !important;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .admin-bar .goog-te-banner-frame {
+            position: absolute;
+        }
+    }
+
 </style>
 <link rel='stylesheet' id='truly-minimal-droid-serif-css'  href='https://fonts.googleapis.com/css?family=Droid+Serif%3A400%2C700%2C400italic%2C700italic&#038;ver=4.9.8' type='text/css' media='all' />
 <link rel='stylesheet' id='truly-minimal-droid-sans-css'  href='https://fonts.googleapis.com/css?family=Droid+Sans%3A400%2C700&#038;ver=4.9.8' type='text/css' media='all' />
@@ -122,55 +125,67 @@ var related_posts_js_options = {"post_heading":"h4"};
 <link rel="search" type="application/opensearchdescription+xml" href="https://bruceoutdoors.wordpress.com/osd.xml" title="Bruceoutdoors Blog of Blots" />
 <link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
 		<style type="text/css">
-			.recentcomments a {
-				display: inline !important;
-				padding: 0 !important;
-				margin: 0 !important;
-			}
+    .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 
-			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
-				border: 0px;
-				margin: 0;
-			}
+    table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+        border: 0px;
+        margin: 0;
+    }
 
-			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
-				border: 0px !important;
-				background-color: transparent !important;
-			}
+    table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+        border: 0px !important;
+        background-color: transparent !important;
+    }
 
-			td.recentcommentsavatarend, td.recentcommentsavatartop {
-				padding: 0px 0px 1px 0px;
-				margin: 0px;
-			}
+    td.recentcommentsavatarend, td.recentcommentsavatartop {
+        padding: 0px 0px 1px 0px;
+        margin: 0px;
+    }
 
-			td.recentcommentstextend {
-				border: none !important;
-				padding: 0px 0px 2px 10px;
-			}
+    td.recentcommentstextend {
+        border: none !important;
+        padding: 0px 0px 2px 10px;
+    }
 
-			.rtl td.recentcommentstextend {
-				padding: 0px 10px 2px 0px;
-			}
+    .rtl td.recentcommentstextend {
+        padding: 0px 10px 2px 0px;
+    }
 
-			td.recentcommentstexttop {
-				border: none;
-				padding: 0px 0px 0px 10px;
-			}
+    td.recentcommentstexttop {
+        border: none;
+        padding: 0px 0px 0px 10px;
+    }
 
-			.rtl td.recentcommentstexttop {
-				padding: 0px 10px 0px 0px;
-			}
-		</style>
+    .rtl td.recentcommentstexttop {
+        padding: 0px 10px 0px 0px;
+    }
+</style>
 		<meta name="application-name" content="Bruceoutdoors Blog of Blots" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Yet another blog of technical ramblings!" /><meta name="msapplication-task" content="name=Edit post;action-uri=https://wordpress.com/post/bruceoutdoors.wordpress.com/1273;icon-uri=https://s2.wp.com/i/icons/post.ico" /><meta name="msapplication-task" content="name=Write a post;action-uri=https://wordpress.com/post/bruceoutdoors.wordpress.com;icon-uri=https://s2.wp.com/i/icons/post.ico" /><meta name="msapplication-task" content="name=Moderate comments;action-uri=https://bruceoutdoors.wordpress.com/wp-admin/edit-comments.php?comment_status=moderated;icon-uri=https://s2.wp.com/i/icons/comment.ico" /><meta name="msapplication-task" content="name=Upload new media;action-uri=https://bruceoutdoors.wordpress.com/wp-admin/media-new.php;icon-uri=https://s2.wp.com/i/icons/media.ico" /><meta name="msapplication-task" content="name=Blog stats;action-uri=https://bruceoutdoors.wordpress.com/wp-admin/index.php?page=stats;icon-uri=https://s1.wp.com/i/icons/stats.ico" /><meta name="description" content="So I have these self-contained C++ files and with a shortcut key I want to automatically build and run active file, and then use a debugger as well if I want to. Who would want to do this? Either you are just learning the language and want a quick way to prototype, or you are&hellip;" />
-<link rel="amphtml" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/amp/"><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<link rel="amphtml" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/amp/"><style type="text/css" media="print">    #wpadminbar {
+        display: none;
+    }</style>
 	<style type="text/css" media="screen">
-	html { margin-top: 32px !important; }
-	* html body { margin-top: 32px !important; }
-	@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px !important; }
-		* html body { margin-top: 46px !important; }
-	}
-</style>
+    html {
+        margin-top: 32px !important;
+    }
+
+    * html body {
+        margin-top: 32px !important;
+    }
+
+    @media screen and ( max-width: 782px ) {
+        html {
+            margin-top: 46px !important;
+        }
+
+        * html body {
+            margin-top: 46px !important;
+        }
+    }</style>
 	<style type="text/css" id="syntaxhighlighteranchor"></style>
 </head>
 
@@ -225,7 +240,7 @@ var related_posts_js_options = {"post_heading":"h4"};
 }
 </pre>
 <p>Note that <code>echo ''</code> is just to print a new line after running the program. If you know you will always execute the program with an input file, simply add <code>&lt;input.txt</code> to the command above (before <code> &amp;&amp; echo ''</code>).</p>
-<div data-shortcode="caption" id="attachment_1278" style="width: 640px" class="wp-caption alignnone"><a href="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png"><img data-attachment-id="1278" data-permalink="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/vscode-code-runner/#main" data-orig-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png" data-orig-size="1023,689" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vscode &#8211; code runner" data-image-description="" data-medium-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=300" data-large-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=630&#038;h=424" class="wp-image-1278 size-large" src="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=630&#038;h=424" alt="" width="630" height="424" srcset="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=630&amp;h=424 630w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=150&amp;h=101 150w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=300&amp;h=202 300w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=768&amp;h=517 768w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png 1023w" sizes="(max-width: 630px) 100vw, 630px" /></a><p class="wp-caption-text">Press Ctrl+Alt+n to build and run the active file</p></div>
+<div data-shortcode="caption" id="attachment_1278" style="        width: 640px" class="wp-caption alignnone"><a href="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png"><img data-attachment-id="1278" data-permalink="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/vscode-code-runner/#main" data-orig-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png" data-orig-size="1023,689" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vscode &#8211; code runner" data-image-description="" data-medium-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=300" data-large-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=630&#038;h=424" class="wp-image-1278 size-large" src="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=630&#038;h=424" alt="" width="630" height="424" srcset="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=630&amp;h=424 630w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=150&amp;h=101 150w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=300&amp;h=202 300w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png?w=768&amp;h=517 768w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-code-runner.png 1023w" sizes="(max-width: 630px) 100vw, 630px" /></a><p class="wp-caption-text">Press Ctrl+Alt+n to build and run the active file</p></div>
 <p>Now if that&#8217;s all you want then you can stop here. The next section let&#8217;s you use a debugger, but requires a different setup.</p>
 <h2>Using Vscode Tasks To Build The Active File</h2>
 <p>This one is a project level configuration, so it assumes you keep your C++ files in one folder, like how I organize my solutions to my CodeForces problems <a href="https://github.com/bruceoutdoors/CodeForces">in this git repository</a>. To get started you can simply copy the json files from <a href="https://github.com/bruceoutdoors/CodeForces/tree/master/.vscode">my <code>.vscode</code> folder</a> over to yours.</p>
@@ -238,10 +253,10 @@ var related_posts_js_options = {"post_heading":"h4"};
         &quot;args&quot;: &quot;build and run cpp&quot;
     }
 </pre>
-<div data-shortcode="caption" id="attachment_1276" style="width: 640px" class="wp-caption alignnone"><a href="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png"><img data-attachment-id="1276" data-permalink="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/vscode-custom-build-task/#main" data-orig-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png" data-orig-size="1022,686" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vscode &#8211; custom build task" data-image-description="" data-medium-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=300" data-large-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=630&#038;h=423" class="wp-image-1276 size-large" src="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=630&#038;h=423" alt="" width="630" height="423" srcset="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=630&amp;h=423 630w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=150&amp;h=101 150w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=300&amp;h=201 300w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=768&amp;h=516 768w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png 1022w" sizes="(max-width: 630px) 100vw, 630px" /></a><p class="wp-caption-text">Build and run the active file using vscode tasks</p></div>
+<div data-shortcode="caption" id="attachment_1276" style="        width: 640px" class="wp-caption alignnone"><a href="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png"><img data-attachment-id="1276" data-permalink="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/vscode-custom-build-task/#main" data-orig-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png" data-orig-size="1022,686" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vscode &#8211; custom build task" data-image-description="" data-medium-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=300" data-large-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=630&#038;h=423" class="wp-image-1276 size-large" src="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=630&#038;h=423" alt="" width="630" height="423" srcset="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=630&amp;h=423 630w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=150&amp;h=101 150w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=300&amp;h=201 300w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png?w=768&amp;h=516 768w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-custom-build-task.png 1022w" sizes="(max-width: 630px) 100vw, 630px" /></a><p class="wp-caption-text">Build and run the active file using vscode tasks</p></div>
 <h2>Setting Up The Debugger</h2>
 <p>Hit <code>f5</code> (or click the green arrow if you are in debug mode) to launch the debugger. This will launch an external terminal instead of using the integrated one.</p>
-<div data-shortcode="caption" id="attachment_1279" style="width: 640px" class="wp-caption alignnone"><a href="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png"><img data-attachment-id="1279" data-permalink="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/vscode-debugger/#main" data-orig-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png" data-orig-size="1010,662" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vscode &#8211; debugger" data-image-description="" data-medium-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=300" data-large-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=630&#038;h=413" class="wp-image-1279 size-large" src="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=630&#038;h=413" alt="" width="630" height="413" srcset="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=630&amp;h=413 630w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=150&amp;h=98 150w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=300&amp;h=197 300w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=768&amp;h=503 768w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png 1010w" sizes="(max-width: 630px) 100vw, 630px" /></a><p class="wp-caption-text">Using the debugger in vscode</p></div>
+<div data-shortcode="caption" id="attachment_1279" style="        width: 640px" class="wp-caption alignnone"><a href="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png"><img data-attachment-id="1279" data-permalink="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/vscode-debugger/#main" data-orig-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png" data-orig-size="1010,662" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="vscode &#8211; debugger" data-image-description="" data-medium-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=300" data-large-file="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=630&#038;h=413" class="wp-image-1279 size-large" src="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=630&#038;h=413" alt="" width="630" height="413" srcset="https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=630&amp;h=413 630w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=150&amp;h=98 150w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=300&amp;h=197 300w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png?w=768&amp;h=503 768w, https://bruceoutdoors.files.wordpress.com/2018/06/vscode-debugger.png 1010w" sizes="(max-width: 630px) 100vw, 630px" /></a><p class="wp-caption-text">Using the debugger in vscode</p></div>
 <p>If you don&#8217;t use an input file then all is good, otherwise it is a hassle to constantly keying in inputs into the program. Unfortunately for us we can&#8217;t pass in the input file as an argument where the debugger is concerned (at least, for now).</p>
 <p>Fortunately there is a simple workaround.</p>
 <p>In STL, both the console input and file input are input streams. So what we can do is override <code>cin</code> to replace it with an <code>ifstream</code>. Because of the scope, our custom version will always take precedence:</p>
@@ -274,7 +289,7 @@ int main()
 					</div>
 				</div>
 			</div>
-		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-press-this"><a rel="nofollow noopener noreferrer" data-shared="" class="share-press-this sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=press-this" target="_blank" title="Click to Press This!"><span>Press This</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-1273" class="share-twitter sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-1273" class="share-linkedin sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-google-plus-1"><a rel="nofollow noopener noreferrer" data-shared="sharing-google-1273" class="share-google-plus-1 sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-1273" class="share-facebook sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-41248825-1273-5bbf16349fd38' data-src='//widgets.wp.com/likes/index.html?ver=20180319#blog_id=41248825&amp;post_id=1273&amp;origin=bruceoutdoors.wordpress.com&amp;obj_id=41248825-1273-5bbf16349fd38' data-name='like-post-frame-41248825-1273-5bbf16349fd38'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-press-this"><a rel="nofollow noopener noreferrer" data-shared="" class="share-press-this sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=press-this" target="_blank" title="Click to Press This!"><span>Press This</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-1273" class="share-twitter sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-1273" class="share-linkedin sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-google-plus-1"><a rel="nofollow noopener noreferrer" data-shared="sharing-google-1273" class="share-google-plus-1 sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-1273" class="share-facebook sd-button share-icon" href="https://bruceoutdoors.wordpress.com/2018/06/09/setting-up-vscode-for-single-file-c-builds/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-41248825-1273-5bbf16349fd38' data-src='//widgets.wp.com/likes/index.html?ver=20180319#blog_id=41248825&amp;post_id=1273&amp;origin=bruceoutdoors.wordpress.com&amp;obj_id=41248825-1273-5bbf16349fd38' data-name='like-post-frame-41248825-1273-5bbf16349fd38'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='        height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
 <div id='jp-relatedposts' class='jp-relatedposts' >
 	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
 </div></div>			</div><!-- .entry-content -->
@@ -300,7 +315,7 @@ int main()
 	
 	
 		<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/06/09/setting-up-vscode-for-single-file-c-builds/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://bruceoutdoors.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/06/09/setting-up-vscode-for-single-file-c-builds/#respond" style="        display: none;">Cancel reply</a></small></h3>			<form action="https://bruceoutdoors.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
 				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="5e700cc6e1" /><input type="hidden" name="_wp_http_referer" value="/2018/06/09/setting-up-vscode-for-single-file-c-builds/" />
 <input type="hidden" name="hc_post_as" id="hc_post_as" value="wordpress" />
 
@@ -313,7 +328,7 @@ int main()
 	<div id="comment-form-nascar">
 		<p>Fill in your details below or click an icon to log in:</p>
 		<ul>
-			<li style="display:none;">
+			<li style="        display: none;">
 				<a href="#comment-form-guest" id="postas-guest" class="nascar-signin-link"
                    title="Login via Guest">
 									</a>
@@ -489,15 +504,15 @@ jQuery(document).ready( highlander_expando_javascript );
 </script>
 
 <div id="comment-form-subscribe">
-	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog"  style="display: inline;">Notify me of new posts via email.</label></p></div>
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="        width: auto;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="        display: inline;">Notify me of new comments via email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="        width: auto;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog"  style="        display: inline;">Notify me of new posts via email.</label></p></div>
 
 <p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='1273' id='comment_post_ID' />
 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ef3eb0bdbc" /></p>
+</p><p style="        display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ef3eb0bdbc" /></p>
 <input type="hidden" name="genseq" value="1539249716" />
-<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="215"/></p>			</form>
+<p style="        display: none;"><input type="hidden" id="ak_js" name="ak_js" value="215"/></p>			</form>
 			</div><!-- #respond -->
-	<div style="clear: both"></div><p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+	<div style="        clear: both"></div><p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
 </div><!-- #comments -->
 
 		
@@ -600,36 +615,36 @@ jQuery(document).ready( highlander_expando_javascript );
 /* ]]> */
 </script>
 
-			</aside><aside id="wp_tag_cloud-2" class="widget wp_widget_tag_cloud"><h1 class="widget-title">Tag Cloud</h1><div style="overflow:hidden"><a href="https://bruceoutdoors.wordpress.com/tag/ai/" class="tag-cloud-link tag-link-14067 tag-link-position-1" style="font-size: 10.8pt;" aria-label="AI (3 items)">AI</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/algorithms/" class="tag-cloud-link tag-link-3378 tag-link-position-2" style="font-size: 21.066666666667pt;" aria-label="algorithms (10 items)">algorithms</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/c/" class="tag-cloud-link tag-link-2426 tag-link-position-3" style="font-size: 16.633333333333pt;" aria-label="C++ (6 items)">C++</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/c11/" class="tag-cloud-link tag-link-54971 tag-link-position-4" style="font-size: 22pt;" aria-label="C++11 (11 items)">C++11</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/codeforces/" class="tag-cloud-link tag-link-33167091 tag-link-position-5" style="font-size: 10.8pt;" aria-label="CodeForces (3 items)">CodeForces</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/cs231n/" class="tag-cloud-link tag-link-469137339 tag-link-position-6" style="font-size: 8pt;" aria-label="CS231n (2 items)">CS231n</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/dfs/" class="tag-cloud-link tag-link-456399 tag-link-position-7" style="font-size: 8pt;" aria-label="dfs (2 items)">dfs</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/dft/" class="tag-cloud-link tag-link-1582994 tag-link-position-8" style="font-size: 8pt;" aria-label="dft (2 items)">dft</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/discrete-fourier-transform/" class="tag-cloud-link tag-link-20149983 tag-link-position-9" style="font-size: 8pt;" aria-label="discrete fourier transform (2 items)">discrete fourier transform</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/dynamic-programming/" class="tag-cloud-link tag-link-906515 tag-link-position-10" style="font-size: 16.633333333333pt;" aria-label="dynamic programming (6 items)">dynamic programming</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/fast-fourier-transform/" class="tag-cloud-link tag-link-8235977 tag-link-position-11" style="font-size: 8pt;" aria-label="fast fourier transform (2 items)">fast fourier transform</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/fft/" class="tag-cloud-link tag-link-62911 tag-link-position-12" style="font-size: 8pt;" aria-label="fft (2 items)">fft</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/graph-theory/" class="tag-cloud-link tag-link-751916 tag-link-position-13" style="font-size: 8pt;" aria-label="Graph Theory (2 items)">Graph Theory</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/hashicorp-atlas/" class="tag-cloud-link tag-link-399047404 tag-link-position-14" style="font-size: 8pt;" aria-label="Hashicorp Atlas (2 items)">Hashicorp Atlas</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/java/" class="tag-cloud-link tag-link-1017 tag-link-position-15" style="font-size: 15pt;" aria-label="Java (5 items)">Java</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/javascript/" class="tag-cloud-link tag-link-457 tag-link-position-16" style="font-size: 8pt;" aria-label="Javascript (2 items)">Javascript</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/jpa/" class="tag-cloud-link tag-link-307053 tag-link-position-17" style="font-size: 8pt;" aria-label="JPA (2 items)">JPA</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/longest-increasing-subsequence/" class="tag-cloud-link tag-link-51882814 tag-link-position-18" style="font-size: 8pt;" aria-label="longest increasing subsequence (2 items)">longest increasing subsequence</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/machine-learning/" class="tag-cloud-link tag-link-40978 tag-link-position-19" style="font-size: 10.8pt;" aria-label="Machine Learning (3 items)">Machine Learning</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/netbeans/" class="tag-cloud-link tag-link-12962 tag-link-position-20" style="font-size: 15pt;" aria-label="Netbeans (5 items)">Netbeans</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/ninja-framework/" class="tag-cloud-link tag-link-347830371 tag-link-position-21" style="font-size: 10.8pt;" aria-label="Ninja Framework (3 items)">Ninja Framework</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/oglman/" class="tag-cloud-link tag-link-254571149 tag-link-position-22" style="font-size: 10.8pt;" aria-label="OGLMan (3 items)">OGLMan</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/python/" class="tag-cloud-link tag-link-832 tag-link-position-23" style="font-size: 8pt;" aria-label="python (2 items)">python</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/qt-creator/" class="tag-cloud-link tag-link-12952187 tag-link-position-24" style="font-size: 8pt;" aria-label="Qt Creator (2 items)">Qt Creator</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/spoj/" class="tag-cloud-link tag-link-3318695 tag-link-position-25" style="font-size: 8pt;" aria-label="SPOJ (2 items)">SPOJ</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/tutorial/" class="tag-cloud-link tag-link-2932 tag-link-position-26" style="font-size: 10.8pt;" aria-label="Tutorial (3 items)">Tutorial</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/uva/" class="tag-cloud-link tag-link-17523 tag-link-position-27" style="font-size: 13.133333333333pt;" aria-label="UVa (4 items)">UVa</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/vagrant/" class="tag-cloud-link tag-link-666241 tag-link-position-28" style="font-size: 8pt;" aria-label="Vagrant (2 items)">Vagrant</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/virtualbox/" class="tag-cloud-link tag-link-989685 tag-link-position-29" style="font-size: 8pt;" aria-label="VirtualBox (2 items)">VirtualBox</a>
-<a href="https://bruceoutdoors.wordpress.com/tag/xml/" class="tag-cloud-link tag-link-6852 tag-link-position-30" style="font-size: 8pt;" aria-label="XML (2 items)">XML</a></div></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
+			</aside><aside id="wp_tag_cloud-2" class="widget wp_widget_tag_cloud"><h1 class="widget-title">Tag Cloud</h1><div style="        overflow: hidden"><a href="https://bruceoutdoors.wordpress.com/tag/ai/" class="tag-cloud-link tag-link-14067 tag-link-position-1" style="        font-size: 10.8pt;" aria-label="AI (3 items)">AI</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/algorithms/" class="tag-cloud-link tag-link-3378 tag-link-position-2" style="        font-size: 21.066666666667pt;" aria-label="algorithms (10 items)">algorithms</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/c/" class="tag-cloud-link tag-link-2426 tag-link-position-3" style="        font-size: 16.633333333333pt;" aria-label="C++ (6 items)">C++</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/c11/" class="tag-cloud-link tag-link-54971 tag-link-position-4" style="        font-size: 22pt;" aria-label="C++11 (11 items)">C++11</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/codeforces/" class="tag-cloud-link tag-link-33167091 tag-link-position-5" style="        font-size: 10.8pt;" aria-label="CodeForces (3 items)">CodeForces</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/cs231n/" class="tag-cloud-link tag-link-469137339 tag-link-position-6" style="        font-size: 8pt;" aria-label="CS231n (2 items)">CS231n</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/dfs/" class="tag-cloud-link tag-link-456399 tag-link-position-7" style="        font-size: 8pt;" aria-label="dfs (2 items)">dfs</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/dft/" class="tag-cloud-link tag-link-1582994 tag-link-position-8" style="        font-size: 8pt;" aria-label="dft (2 items)">dft</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/discrete-fourier-transform/" class="tag-cloud-link tag-link-20149983 tag-link-position-9" style="        font-size: 8pt;" aria-label="discrete fourier transform (2 items)">discrete fourier transform</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/dynamic-programming/" class="tag-cloud-link tag-link-906515 tag-link-position-10" style="        font-size: 16.633333333333pt;" aria-label="dynamic programming (6 items)">dynamic programming</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/fast-fourier-transform/" class="tag-cloud-link tag-link-8235977 tag-link-position-11" style="        font-size: 8pt;" aria-label="fast fourier transform (2 items)">fast fourier transform</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/fft/" class="tag-cloud-link tag-link-62911 tag-link-position-12" style="        font-size: 8pt;" aria-label="fft (2 items)">fft</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/graph-theory/" class="tag-cloud-link tag-link-751916 tag-link-position-13" style="        font-size: 8pt;" aria-label="Graph Theory (2 items)">Graph Theory</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/hashicorp-atlas/" class="tag-cloud-link tag-link-399047404 tag-link-position-14" style="        font-size: 8pt;" aria-label="Hashicorp Atlas (2 items)">Hashicorp Atlas</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/java/" class="tag-cloud-link tag-link-1017 tag-link-position-15" style="        font-size: 15pt;" aria-label="Java (5 items)">Java</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/javascript/" class="tag-cloud-link tag-link-457 tag-link-position-16" style="        font-size: 8pt;" aria-label="Javascript (2 items)">Javascript</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/jpa/" class="tag-cloud-link tag-link-307053 tag-link-position-17" style="        font-size: 8pt;" aria-label="JPA (2 items)">JPA</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/longest-increasing-subsequence/" class="tag-cloud-link tag-link-51882814 tag-link-position-18" style="        font-size: 8pt;" aria-label="longest increasing subsequence (2 items)">longest increasing subsequence</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/machine-learning/" class="tag-cloud-link tag-link-40978 tag-link-position-19" style="        font-size: 10.8pt;" aria-label="Machine Learning (3 items)">Machine Learning</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/netbeans/" class="tag-cloud-link tag-link-12962 tag-link-position-20" style="        font-size: 15pt;" aria-label="Netbeans (5 items)">Netbeans</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/ninja-framework/" class="tag-cloud-link tag-link-347830371 tag-link-position-21" style="        font-size: 10.8pt;" aria-label="Ninja Framework (3 items)">Ninja Framework</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/oglman/" class="tag-cloud-link tag-link-254571149 tag-link-position-22" style="        font-size: 10.8pt;" aria-label="OGLMan (3 items)">OGLMan</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/python/" class="tag-cloud-link tag-link-832 tag-link-position-23" style="        font-size: 8pt;" aria-label="python (2 items)">python</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/qt-creator/" class="tag-cloud-link tag-link-12952187 tag-link-position-24" style="        font-size: 8pt;" aria-label="Qt Creator (2 items)">Qt Creator</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/spoj/" class="tag-cloud-link tag-link-3318695 tag-link-position-25" style="        font-size: 8pt;" aria-label="SPOJ (2 items)">SPOJ</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/tutorial/" class="tag-cloud-link tag-link-2932 tag-link-position-26" style="        font-size: 10.8pt;" aria-label="Tutorial (3 items)">Tutorial</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/uva/" class="tag-cloud-link tag-link-17523 tag-link-position-27" style="        font-size: 13.133333333333pt;" aria-label="UVa (4 items)">UVa</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/vagrant/" class="tag-cloud-link tag-link-666241 tag-link-position-28" style="        font-size: 8pt;" aria-label="Vagrant (2 items)">Vagrant</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/virtualbox/" class="tag-cloud-link tag-link-989685 tag-link-position-29" style="        font-size: 8pt;" aria-label="VirtualBox (2 items)">VirtualBox</a>
+<a href="https://bruceoutdoors.wordpress.com/tag/xml/" class="tag-cloud-link tag-link-6852 tag-link-position-30" style="        font-size: 8pt;" aria-label="XML (2 items)">XML</a></div></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
 		<select id="archives-dropdown-2" name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
 			
 			<option value="">Select Month</option>
@@ -767,7 +782,7 @@ var WPGroHo = {"my_hash":"0cc89dcc9b6ce469ee5508ac1314bb56"};
 		});
 	</script>
 
-		<div style="display:none">
+		<div style="        display: none">
 	</div>
 
 	<div id="ab-reblog-box">
@@ -974,7 +989,7 @@ var WPGroHo = {"my_hash":"0cc89dcc9b6ce469ee5508ac1314bb56"};
 
 	wpcom_reblog.init();
 	</script>
-<div id="report-form-window" style="display:none;"></div><script type='text/javascript'>
+<div id="report-form-window" style="        display: none;"></div><script type='text/javascript'>
 /* <![CDATA[ */
 var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/bruceoutdoors.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/bruceoutdoors.wordpress.com\/wp-login.php?action=logout&_wpnonce=353fd9069f","homeURL":"https:\/\/bruceoutdoors.wordpress.com\/","postID":"1273","gravDefault":"gravatar_default","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"1","isJetpack":"","text_direction":"ltr"};
 /* ]]> */
@@ -1007,7 +1022,7 @@ var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"P
 	<script type="text/javascript">
 		window.WPCOM_sharing_counts = {"https:\/\/bruceoutdoors.wordpress.com\/2018\/06\/09\/setting-up-vscode-for-single-file-c-builds\/":1273};
 	</script>
-					<div id="sharing_email" style="display: none;">
+					<div id="sharing_email" style="        display: none;">
 		<form action="/2018/06/09/setting-up-vscode-for-single-file-c-builds/" method="post">
 			<label for="target_email">Send to Email Address</label>
 			<input type="email" name="target_email" id="target_email" value="" />
@@ -1024,17 +1039,18 @@ var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"P
 				data-tabindex="0"></div>
 			<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en" async></script>
 			
-			<img style="float: right; display: none" class="loading" src="https://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif" alt="loading" width="16" height="16" />
+			<img style="        float: right;
+        display: none" class="loading" src="https://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif" alt="loading" width="16" height="16" />
 			<input type="submit" value="Send Email" class="sharing_send" />
 			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
 
-			<div class="errors errors-1" style="display: none;">
+			<div class="errors errors-1" style="        display: none;">
 				Post was not sent - check your email addresses!			</div>
 
-			<div class="errors errors-2" style="display: none;">
+			<div class="errors errors-2" style="        display: none;">
 				Email check failed, please try again			</div>
 
-			<div class="errors errors-3" style="display: none;">
+			<div class="errors errors-3" style="        display: none;">
 				Sorry, your blog cannot share posts by email.			</div>
 		</form>
 	</div>
@@ -1198,7 +1214,7 @@ try{
 }catch(e){}
 })();
 // ]]>
-</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20180319#ver=20180319' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20180319#ver=20180319' scrolling='no' id='likes-master' name='likes-master' style='        display: none;'></iframe>
 		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
 <script src="//stats.wp.com/w.js?56" type="text/javascript" async defer></script>
 <script type="text/javascript">
@@ -1209,7 +1225,9 @@ _tkq.push(['storeContext', {'blog_id':'41248825','blog_tz':'8','user_lang':'en',
 _stq.push(['view', {'blog':'41248825','v':'wpcom','tz':'8','user':'1','user_id':'35263312','post':'1273','subd':'bruceoutdoors'}]);
 _stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1zNDZ8S252Wis9XUQyb3YrcUVIU2R0VH5TcUpqcF9NWi1bMDJfLy90VXNvY2U3ZFZ1RWlDaW8lJnxjWWh+T0pXVHw3QXd3aGlbU244JkksJm04ZEpONWVkU2U0Jm1kQyw9d1ZqbElHN0NOd1R3UltIUHpUWnQtLCZGfE5OfGFXLlZTWjBzQ0lkfFI9MXxqfFhiYnQ4dzVXUWZmOTFSK25YTEVNY3NrQ0JBb3RHfnRaSHVSSTh8T1RaMiV5ajByOFBSRF9PRVdiSisxTmYlLTc5V3VafE54bXNLRG5LMVpFMWVxdXJGMUpEW2hQbFcvW3h6XTNoLUJwJVhTd1dBLjJvM2pqZXNGREx1bCssYml5MzJnLVlsRT1vVGZscEg3aW1XeT9RTk56WU9YfEhpZGddc2UvLVIxd2t0NERtfEoweGhLSnl1ZnN8anF5ekpENnpFMFkuLzF4XzJKTXloNFo='}]);
 	</script>
-<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="        height: 0px;
+        width: 0px;
+        overflow: hidden" alt="" /></noscript>
 		<div id="wpadminbar" class="nojq nojs ltr">
 							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
 						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar" tabindex="0">
@@ -1218,7 +1236,9 @@ _stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1zNDZ8S252Wis9XUQyb3YrcUVIU2R0VH
 		<li id="wp-admin-bar-blog" class="menupop my-sites mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/stats/bruceoutdoors.wordpress.com">My Site</a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-blog-default" class="ab-submenu">
 			
 		<li id="wp-admin-bar-blog-info" class="has-blavatar"><a class="ab-item"  href="https://bruceoutdoors.wordpress.com/"><div class="ab-site-icon"><img class="avatar" src="https://secure.gravatar.com/blavatar/31fa4cb973d0e3f1832f82337606f509?s=120" alt="Current site avatar" /> </div><span class="ab-site-title">Bruceoutdoors Blog o&hellip;</span><span class="ab-site-description">bruceoutdoors.wordpress.com</span></a>		</li>
-		<li id="wp-admin-bar-blog-stats" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/stats/bruceoutdoors.wordpress.com">Stats <img style="width: 95px; margin: 0; float: right;" src="https://bruceoutdoors.wordpress.com/wp-includes/charts/admin-bar-hours-scale-2x.php?masterbar=1" alt="Stats" title="Showing site views per hour for the last 48 hours. Click for full Site Stats." /></a>		</li>
+		<li id="wp-admin-bar-blog-stats" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/stats/bruceoutdoors.wordpress.com">Stats <img style="        width: 95px;
+        margin: 0;
+        float: right;" src="https://bruceoutdoors.wordpress.com/wp-includes/charts/admin-bar-hours-scale-2x.php?masterbar=1" alt="Stats" title="Showing site views per hour for the last 48 hours. Click for full Site Stats." /></a>		</li>
 		<li id="wp-admin-bar-activity" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/activity-log/bruceoutdoors.wordpress.com">Activity</a>		</li>
 		<li id="wp-admin-bar-plan" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/plans/bruceoutdoors.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-plan">Plan</a><a href="https://wordpress.com/plans/bruceoutdoors.wordpress.com" class="ab-secondary" id="wp-admin-bar-plan-badge">Free</a></div>		</li>		</ul>
 			<ul id="wp-admin-bar-publish" class="ab-submenu">
@@ -1255,7 +1275,7 @@ _stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1zNDZ8S252Wis9XUQyb3YrcUVIU2R0VH
 	</div>		</li>		</ul>
 			<ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
 			
-		<li id="wp-admin-bar-notes" class="menupop">		<div class="ab-item ab-empty-item" ><span id="wpnt-notes-unread-count" class="wpnt-loading wpn-read"></span><span class="noticon noticon-bell"></span><span class="ab-text">Notifications</span></div><div id="wpnt-notes-panel2" style="display:none" lang="en" dir="ltr"><div class="wpnt-notes-panel-header"><span class="wpnt-notes-header"></span><span class="wpnt-notes-panel-link"></span></div></div>		</li>
+		<li id="wp-admin-bar-notes" class="menupop">		<div class="ab-item ab-empty-item" ><span id="wpnt-notes-unread-count" class="wpnt-loading wpn-read"></span><span class="noticon noticon-bell"></span><span class="ab-text">Notifications</span></div><div id="wpnt-notes-panel2" style="        display: none" lang="en" dir="ltr"><div class="wpnt-notes-panel-header"><span class="wpnt-notes-header"></span><span class="wpnt-notes-panel-link"></span></div></div>		</li>
 		<li id="wp-admin-bar-my-account" class="menupop with-avatar mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/me/"><img alt='' src='https://0.gravatar.com/avatar/0cc89dcc9b6ce469ee5508ac1314bb56?s=32&#038;d=mm&#038;r=G' class='avatar avatar-32' height='32' width='32' /><span class="ab-text">Me</span></a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-user-actions" class="ab-submenu">
 			
 		<li id="wp-admin-bar-user-info" class="user-info user-info-item">		<div class="ab-item ab-empty-item" tabindex="-1"><img alt='' src='https://0.gravatar.com/avatar/0cc89dcc9b6ce469ee5508ac1314bb56?s=128&#038;d=mm&#038;r=G' class='avatar avatar-128' height='128' width='128' /><span class="display-name">Lee Zhen Yong</span><a class="username" href="http://gravatar.com/bruceoutdoors">@bruceoutdoors</a><form action="https://bruceoutdoors.wordpress.com/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fwordpress.com%2F%3Fapppromo&amp;_wpnonce=353fd9069f" method="post"><button class="ab-sign-out" type="submit">Sign Out</button></form></div>		</li>

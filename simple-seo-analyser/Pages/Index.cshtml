@@ -7,23 +7,42 @@
 <div class="body-content">
     <form method="post" class="form-horizontal">
         <p>Place URL/Text Here: <textarea name="Input">@ViewData["Input"]</textarea><button type="submit" class="btn btn-primary">Submit</button></p>
+        <p>
+            <strong>Settings:</strong>
+            <ul>
+                <li>URL Count: @Html.CheckBoxFor(x => x.EnableURL)</li>
+                <li>Meta Keywords: @Html.CheckBoxFor(x => x.EnableKeywords)</li>
+                <li>Word Counts: @Html.CheckBoxFor(x => x.EnableWordCounts) </li>
+            </ul>
+        </p>
     </form>
     @if (ViewData["ErrorMsg"] != null)
     {
         <p><strong>Error: </strong><i>@ViewData["ErrorMsg"]</i></p>
     }
-    else if (ViewData["Result"] != null)
+    else
     {
-        <p><strong>URL Count: </strong>@ViewData["UrlCount"]</p>
-        <table class="sortable">
-            <thead><tr><th>Word</th><th>Count</th></tr></thead>
-            <tbody>
-                @foreach (KeyValuePair<string, int> pair in ViewData["Result"] as Dictionary<string, int>)
-                {
-                    <tr><td>@pair.Key</td><td>@pair.Value</td></tr>
-                }
-            </tbody>
-        </table>
+        @if (ViewData["UrlCount"] != null)
+        {
+            <p><strong>URL Count: </strong>@ViewData["UrlCount"]</p>
+        }
+        @if (ViewData["Keywords"] != null)
+        {
+            <p><strong>Keywords: </strong>@ViewData["Keywords"]</p>
+        }
+        @if (ViewData["Result"] != null)
+        {
+            <table class="sortable">
+                <thead><tr><th>Word</th><th>Count</th></tr></thead>
+                <tbody>
+                    @foreach (KeyValuePair<string, int> pair in ViewData["Result"] as Dictionary<string, int>)
+                    {
+                        <tr><td>@pair.Key</td><td>@pair.Value</td></tr>
+                    }
+                </tbody>
+            </table>
+        }
     }
+
 
 </div>

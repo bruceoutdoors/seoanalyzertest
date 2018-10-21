@@ -17,6 +17,13 @@ namespace simple_seo_analyser
 
         [BindProperty]
         public String Input { get; set; }
+        [BindProperty]
+        public bool EnableURL { get; set; } = true;
+        [BindProperty]
+        public bool EnableKeywords { get; set; } = true;
+        [BindProperty]
+        public bool EnableWordCounts { get; set; } = true;
+
         public void OnGet()
         {
         }
@@ -24,17 +31,31 @@ namespace simple_seo_analyser
         public void OnPost()
         {
             ViewData["Input"] = Input;
-
             Dictionary<string, int> result;
 
             try
             {
                 HtmlNode node = GetHtmlNode(Input);
-                result = SEOAnalyze(node);
-                HtmlNodeCollection urls = node.SelectNodes("//a[@href]");
-                ViewData["UrlCount"] = urls.Count;
 
-                ViewData["Result"] = result;
+                if (EnableKeywords)
+                {
+                    String keywords = node
+                    .SelectSingleNode(@"//meta[@name='keywords']/@content")
+                    .GetAttributeValue("content", "No keywords found");
+                    ViewData["Keywords"] = keywords;
+                }
+
+                if (EnableURL)
+                {
+                    HtmlNodeCollection urls = node.SelectNodes("//a[@href]");
+                    ViewData["UrlCount"] = urls.Count;
+                }
+
+                if (EnableWordCounts)
+                {
+                    result = SEOAnalyze(node);
+                    ViewData["Result"] = result;
+                }
             }
             catch
             {
