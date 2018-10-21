@@ -41,7 +41,7 @@ namespace simple_seo_analyser
                 {
                     String keywords = node
                     .SelectSingleNode(@"//meta[@name='keywords']/@content")
-                    .GetAttributeValue("content", "No keywords found");
+                    .GetAttributeValue("content", "");
                     ViewData["Keywords"] = keywords;
                 }
 

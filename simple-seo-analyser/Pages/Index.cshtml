@@ -28,11 +28,23 @@
         }
         @if (ViewData["Keywords"] != null)
         {
-            <p><strong>Keywords: </strong>@ViewData["Keywords"]</p>
+            @if (ViewData["Keywords"] as String == "")
+            {
+                <p><strong><i>No Keywords found</i></strong></p>
+
+            }
+            else
+            {
+                <p><strong>Keywords: </strong><span id="keywordsContent"> @ViewData["Keywords"]</span></p>
+                <p id="keywordCheck">
+                    <strong>Show only counts from keywords: </strong><input id="keywordsOnly" type="checkbox" />
+                </p>
+            }
+
         }
         @if (ViewData["Result"] != null)
         {
-            <table class="sortable">
+            <table class="sortable" id="countsTable">
                 <thead><tr><th>Word</th><th>Count</th></tr></thead>
                 <tbody>
                     @foreach (KeyValuePair<string, int> pair in ViewData["Result"] as Dictionary<string, int>)
@@ -46,3 +58,33 @@
 
 
 </div>
+<script>
+    var displayKeywordsOnly = document.getElementById('keywordsOnly');
+    var countsTable = document.getElementById('countsTable');
+    if (!countsTable && displayKeywordsOnly) {
+        document.getElementById('keywordCheck').hidden = true;
+    }
+    if (displayKeywordsOnly) {
+        var content = document.getElementById('keywordsContent').textContent.split(',').map(x => x.trim());
+        var map = {};
+        for (var x of content) {
+            map[x] = true;
+        }
+        console.log(content);
+        displayKeywordsOnly.addEventListener('change', function() {
+            var rows = countsTable.querySelectorAll('tbody tr');
+            if (displayKeywordsOnly.checked) {
+                for (var row of rows) {
+                    var entry = row.cells[0].textContent;
+                    if (!map[entry]) {
+                        row.hidden = true;
+                    }
+                }
+            } else {
+                for (var row of rows) {
+                    row.hidden = false;
+                }
+            }
+        })
+    }
+</script>
